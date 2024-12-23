@@ -37,6 +37,7 @@ export async function UpdateURL(App, URL, Status, ID) {
     return result.affectedRows;
 }
 
+// deleting URL
 export async function DeleteURL(ID) {
     const result = await pool.query(`delete from URLS where ID=?`, [ID])
     return result;
